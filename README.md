@@ -14,7 +14,7 @@
 
 This code-along lab will walk you through creating, manipulating, and concatenating (combining) strings while printing them with `NSLog()`.
 
-Open the `objc-parrot.xcodeproj` file and navigate to the `FISAppDelegate.m` implementation file. You'll enter all of your code in the `application:didFinishLaunchingWithOptions:` method body before the `return YES` line.
+Open the `objc-parrot.xcodeproj` file (`$ open objc-parrot.xcodeproj`) and navigate to the `FISAppDelegate.m` implementation file. You'll enter all of your code in the `application:didFinishLaunchingWithOptions:` method body before the `return YES` line.
 
 **Top-tip:** *If you wish to play around with Objective-C code snippets, this location in a blank program (or one of these early labs that we're supplying to you) is the best option for a "playground". Objective-C is not accurately supported by any REPL or by playgrounds like many other programming languages including Swift. It takes a full Xcode project to run code snippets.*
 
@@ -73,7 +73,7 @@ SQUAWK!
   * Run the program with `⌘``R`, this will print `Wind in yer sails!`.
 
 ##### B. Interpolate multiple strings into a string variable
-1. Create a new `NSString` variable called `windInYerSails` and use it capture the return of calling `stringWithFormat:` on `NSString`. Submit to the method call a format string and format arguments identical to the `NSLog()` above:
+1. Create a new `NSString` variable called `windInYerSails` and use it to capture the return of calling `stringWithFormat:` on `NSString`. Submit to the method call a format string and format arguments identical to the `NSLog()` above:
   * `NSString *windInYerSails = [NSString stringWithFormat:@"%@ %@ %@ %@!", wind, inString, yer, sails];`
 2. Print `windInYerSails` to the console:
   * `NSLog(@"%@", windInYerSails);`
@@ -89,6 +89,7 @@ SQUAWK!
   * Run the program with `⌘``R`, this will print another `Wind`.
 3. Call the `stringByAppendingString:` method on `windInYerSails` with a string literal containing a space (`@" "`) as the argument:
   * `windInYerSails = [windInYerSails stringByAppendingString:@" "];`
+	* `NSLog(@"%@", windInYerSails);`
 4. Call the `stringByAppendingString:` method on `windInYerSails` a second time but with `inString` submitted as the argument, then print `windInYerSails`:
   * `windInYerSails = [windInYerSails stringByAppendingString:inString];`
   * `NSLog(@"%@", windInYerSails);`
@@ -130,7 +131,7 @@ Wind in yer sails!
   * `NSLog(@"%@%@%@%@%@", look, at, me, im, molting);`
   * Run the program with `⌘``R`, this will print `lookatmei'mmolting`.
 3. Now print the five strings again but insert a space between each specifier:
-  * `NSLog(@"%@%@%@%@%@", look, at, me, im, molting);`
+  * `NSLog(@"%@ %@ %@ %@ %@", look, at, me, im, molting);`
   * Run the program with `⌘``R`, this will print `look at me i'm molting`.
 4. Now print the five strings again but with a comma (`,`) after the third format specifier and an exclamation point (`!`) after the fifth format specifier:
   * `NSLog(@"%@ %@ %@, %@ %@!", look, at, me, im, molting);`
@@ -140,7 +141,7 @@ Wind in yer sails!
   * Run the program with `⌘``R`, this will print `LOOK AT ME, I'M MOLTING!`.
 
 ##### B.
-1. Create a new `NSString` variable called `lookAt` and use it capture the return of calling the `stringByAppendingFormat:` method on the `look` string with a format string that has one space and one format specifier and the `at` string as the format argument, then print `lookAt`:
+1. Create a new `NSString` variable called `lookAt` and use it to capture the return of calling the `stringByAppendingFormat:` method on the `look` string with a format string that has one space and one format specifier and the `at` string as the format argument, then print `lookAt`:
   * `NSString *lookAt = [look stringByAppendingFormat:@" %@", at];`
   * `NSLog(@"%@", lookAt);`
   * Run the program with `⌘``R`, this will print `look at`.
@@ -198,3 +199,9 @@ LOOK AT ME, I'M MOLTING!
 
 
 
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/objc-parrot' title='Code-Along: Parrot'>Code-Along: Parrot</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/objc-parrot'>Code-Along: Parrot</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/objc-parrot'>Code-Along: Parrot</a> on Learn.co and start learning to code for free.</p>
